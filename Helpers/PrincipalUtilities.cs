@@ -17,4 +17,13 @@ public static class PrincipalUtilities
 		int.TryParse(input, out var userId);
 		return userId;
 	}
+      public static int GetDriverId(this ClaimsPrincipal principal)
+      {
+		var isConversionSuccessful =int.TryParse(principal.FindFirstValue(JwtRegisteredClaimNames.Sub) ,out var DriverId);
+		if (isConversionSuccessful )
+		{
+			return DriverId;
+	}	
+	return 0;
+		}
 }

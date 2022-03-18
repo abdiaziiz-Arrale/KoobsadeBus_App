@@ -1,0 +1,74 @@
+--Bus Appointment Database
+
+
+
+----User
+-Id
+-fullName
+-Email
+-Gender
+--phone
+-Address
+-IsDisable
+-CreateAt
+
+----Booking
+--Id
+--User
+--Appointment Time
+--schedule
+--PaidAmount
+--Commission
+--paymentMethod
+--TransactionId
+--IsComplete
+--CreateAt
+
+----schedule
+--Id
+-- day
+--Present
+---going
+--Time
+---seat
+--Customers
+--isAvailable
+--createAt
+
+----TimeSlot
+--Id
+--isAvailable
+---travelBegan
+-TravelEnd
+--createAt
+---No.Passenger
+
+
+-----Customers
+-Id
+-User
+-phone,
+schedule
+-payment
+-CreateAt
+
+----BusDriver
+-Id
+--User
+-Driving Lisence,
+-Car TrNo,
+-type of Bus,
+-No of seats
+- timeslot
+-Revenue Report
+
+
+----Admin
+-Id
+-Isverified
+-Ticket Price
+-Locations
+-cities
+-everyPrice
+-DeleteUser
+-Revenue Report

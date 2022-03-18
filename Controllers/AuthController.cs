@@ -1,7 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Data;
 using Microsoft.IdentityModel.Tokens;
 
@@ -12,7 +12,8 @@ using System.Text;
 // using Data;
 // using Microsoft.IdentityModel.JsonWebTokens;
 namespace Controllers;
-[ApiController]
+// [ApiController]
+
 [Route("[Controller]")]
 // [Authorize]
 
@@ -24,7 +25,7 @@ public class AuthController:ControllerBase
            _context = context; 
       }
       [HttpGet]
-      // [Allow]
+//   [Authorize]
   public async Task<IActionResult> Login(string email)
   {
         var login = await _context.Users.SingleOrDefaultAsync(l=> l.Email==email);
@@ -40,6 +41,14 @@ public class AuthController:ControllerBase
 			new(JwtRegisteredClaimNames.Gender, login.Gender),
 			new(JwtRegisteredClaimNames.Email, login.Email),
 		};
+
+
+		var Driver = await _context.BusDrivers.SingleOrDefaultAsync(b=> b.UserId ==login.Id);
+		if (Driver is not null)
+		{
+			claims.Add(new("DriverId", Driver.Id.ToString()));
+		}
+
   var keyInput = "Somaliland_waa_dal_Kamida_Dalalka_Soo_Koraya";
    
 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyInput));

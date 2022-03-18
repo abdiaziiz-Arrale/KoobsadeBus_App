@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
 namespace Controllers;
+using Microsoft.AspNetCore.Authorization;
 using Data;
+using Helpers;
 using ViewModel;
 [Route("[Controller]")]
 public class BusDriverController:ControllerBase
@@ -21,12 +23,30 @@ public class BusDriverController:ControllerBase
 
       }
       [HttpPost]
-      public async Task<IActionResult> AddDriver([FromBody] BusDriver busDriver )
+      // [Authorize]
+      public async Task<IActionResult> AddDriver([FromBody] BusDriverViewModel busDriverViewModel )
+ 
+ {
+       var driver = await _context.BusDrivers.SingleOrDefaultAsync(d=> d.UserId==User.GetId());
+      //  if( driver is null)
+      //  {
+      //        return BadRequest("ka bax meesha");
+      //  }
+      driver =new BusDriver
       {
-        _context.BusDrivers.AddAsync(busDriver);
-    await _context.SaveChangesAsync();
-    return Ok( busDriver);
-      }
+       DriverLisence = busDriverViewModel.DriverLisence ,
+       IsVeriveid = true,
+       CarTrNo = busDriverViewModel.CarTrNo,
+       TypeOfBus = busDriverViewModel.TypeOfBus,
+       NumberOfseats = busDriverViewModel.NumberOfseats,
+       CreateAt = DateTime.UtcNow,
+          UserId = 5
+
+      };
+        await _context.AddAsync(driver);
+     await _context.SaveChangesAsync();
+     return Created("",driver);
+ }
 
    
 }

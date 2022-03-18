@@ -1,0 +1,47 @@
+Bus Booking center 
+
+
+-Admin
+-Driver Bus
+-Customers
+
+----Bus Driver
+-allow The Bus Driver to create a Profile(fullName ,phone ,Email,address,gender,Driving Lisence,Car TrNo,type of Bus,No of seats)
+-after it is verification should be do the Follow:-
+
+-set Availability schedule and time slots
+-set the Number Of Passenger 
+-start when the travel began in Customers
+-done when the the travel complete
+-Revue Report 
+
+----Customers
+-Customer can Make Booking (fullName,phone,Email,Gender ,address)
+-Customer set the where He is 
+-Customer set the where He is going 
+-set schedule travel by day day and time slots
+--show the Number of Busses and the there time
+--set available seats in Bus
+-make payment 
+-Provide previous appointment schedule
+-Cancel the appointment
+-Review The Driver Bus Services 
+  
+
+----Admin 
+--verified the Driver Busses 
+--set Ticked Price the minimum ticket is $1
+--set the Locations for Cities And there tickets 
+--Set new User for management 
+-terminate Driver Busses
+-Revenue Report.
+
+----other additional Features
+--Register the User for The first Login
+
+---security system for Authentication (google,facebook)
+--prevent Double appointment--appointment can not be changed before 24 hrs 
+-- Prevent overlapping appointments.
+--Automated payments (eDahab, Zaad/Sahal/EVC?).
+
+

@@ -62,3 +62,5 @@ C:\Users\Abdiaziiz\Desktop\full Stack\koobsade_Appoitment\bin\Debug\net6.0\Swash
 C:\Users\Abdiaziiz\Desktop\full Stack\koobsade_Appoitment\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Abdiaziiz\Desktop\full Stack\koobsade_Appoitment\obj\Debug\net6.0\koobsade_Appoitment.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Abdiaziiz\Desktop\full Stack\koobsade_Appoitment\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Abdiaziiz\Desktop\full Stack\koobsade_Appoitment\bin\Debug\net6.0\WebClient\package-lock.json
+C:\Users\Abdiaziiz\Desktop\full Stack\koobsade_Appoitment\bin\Debug\net6.0\WebClient\package.json

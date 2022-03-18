@@ -28,6 +28,7 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer(
             };
 
       });
+builder.Services.AddCors(config => config.AddPolicy("Default",policy=> policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
 
 builder.Services.AddSwaggerGen();
@@ -35,6 +36,7 @@ builder.Services.AddEndpointsApiExplorer();
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors("Default");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

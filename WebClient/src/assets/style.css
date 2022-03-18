@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.navs{
+    @apply  hover:bg-cyan-500 font-semibold py-4 px-4 rounded-sm ;
+}
+.btn{
+    @apply  hover:bg-white  hover:text-black hover:border border-cyan-700  bg-green-600 border text-white tracking-widest py-2 font-serif px-4 rounded-lg;
+}
+.btnsign{
+  @apply  hover:bg-white hover:text-black hover:border border-pink-800 font-serif py-2  px-4 rounded-lg text-white tracking-widest bg-rose-400;
+}
+.router-link-active{
+    @apply  border-green-500 text-green-500 border-b-4;
+}
+.btnbook{
+    @apply border  hover:border-blue-800 hover:bg-white hover:text-black py-3 px-20 rounded-lg tracking-widest bg-blue-800 text-white ;
+}
