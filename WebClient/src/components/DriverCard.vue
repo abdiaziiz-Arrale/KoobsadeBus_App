@@ -1,9 +1,9 @@
 <script setup lang="ts">
-defineProps<{ name: string, TypeOfBus: string , DriverLiceince:string}>();
+defineProps<{ name: string, TypeOfBus: string , numberOfseats:string}>();
 </script>
 
 <template>
-	<div class="mx-8 mt-2 mb-12 md:max-w-lg md:my-12 bg-cyan-50 rounded-lg shadow-lg shadow-cyan-300/50">
+	<div class="mx-8 mt-2 mb-12 md:max-w-lg md:my-12 bg-cyan-500 rounded-lg shadow-lg shadow-cyan-300/50">
 		<div class=" md:px-2 py-1">
 			<slot>
 				<img
@@ -14,14 +14,14 @@ defineProps<{ name: string, TypeOfBus: string , DriverLiceince:string}>();
 		</div>
 
 		<div class="flex flex-col">
-			<span class="font-semibold text-2xl px-8"> Bus No :{{TypeOfBus}}</span>
-			<span class="font-semibold text-2xl px-8">{{DriverLiceince}}</span>
+			<span class="text-lg text-white px-8"> Darawalka :<span class="text-black font-serif font-bold ml-2">{{name}}</span></span>
+			<span class=" text-lg px-8 text-white"> Nooca Gadiidka:<span class="text-black font-serif font-bold ml-2">{{TypeOfBus}}</span></span>
 			<span
-				class="block text-gray-500 text-sm px-8 mt-2"
-			>{{ name }}</span>
+				class="block text-white font-bold text-sm px-8 mt-2"
+			>Kuraasidiisa:<span class="text-black font-serif font-bold ml-2">{{numberOfseats}}</span></span>
 		</div>
 		<div class="text-center py-10">
-			<button name="button" class="bg-blue-700 px-6 py-2 rounded-lg ">Dalbo</button>
+			<button name="button" class="bg-blue-800 px-6 py-2 rounded-lg text-white ">Dalbo</button>
 		</div>
 	</div>
 </template>

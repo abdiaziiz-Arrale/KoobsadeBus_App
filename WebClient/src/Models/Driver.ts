@@ -3,16 +3,16 @@
 export interface Driver{
       id: number ;
       DriverLiceince : string ;
-      TypeOfBus:string ;
+      typeOfBus:string ;
       CarTrNo: string ;
-      NumberOfseats: number ;
+      numberOfseats: number ;
       user: User ;
 
 
 }
 
 export interface User{
-      Fullname: string ;
+      fullName: string ;
       Address: string ;
       gender: string ;
 } 

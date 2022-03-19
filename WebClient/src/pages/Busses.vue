@@ -17,10 +17,10 @@ console.log("list",driver.value);
 <template>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4">
-  <DriverCard  v-for="item in driver" :TypeOfBus="item.id"  >
+  <DriverCard  v-for="item in driver" :name="item.user.fullName" :TypeOfBus="item.typeOfBus" :numberOfseats="item.numberOfseats">
   
   </DriverCard>
-
-
   </div>
+
+  <div class="mt-30 "></div>
 </template>

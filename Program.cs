@@ -12,6 +12,7 @@ builder.Services.AddDbContext<Data.KoobsadeDbContext>(
       config=> config.UseSqlServer(connectionString)
 );
 
+
 builder.Services.AddAuthentication("Bearer").AddJwtBearer(
       options=>{
             options.RequireHttpsMetadata=false;

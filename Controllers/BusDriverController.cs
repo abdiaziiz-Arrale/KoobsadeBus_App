@@ -18,7 +18,7 @@ public class BusDriverController:ControllerBase
       [HttpGet]
       public async Task<IActionResult> GetDriver()
       {
-            var Driver = await _context.BusDrivers.ToListAsync();
+            var Driver = await _context.BusDrivers.Include(d=> d.User).ToListAsync();
             return Ok(Driver);
 
       }
@@ -27,7 +27,7 @@ public class BusDriverController:ControllerBase
       public async Task<IActionResult> AddDriver([FromBody] BusDriverViewModel busDriverViewModel )
  
  {
-       var driver = await _context.BusDrivers.SingleOrDefaultAsync(d=> d.UserId==User.GetId());
+       var driver = await _context.BusDrivers.Include(d=> d.User).SingleOrDefaultAsync(d=> d.UserId==User.GetId());
       //  if( driver is null)
       //  {
       //        return BadRequest("ka bax meesha");

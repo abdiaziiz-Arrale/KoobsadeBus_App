@@ -29,8 +29,8 @@ let isMenuHidden=ref(true);
 </ul>
 
 <div class="hidden md:flex  space-x-2 float-right  mt-2  ">
-      <RouterLink to="/" class="btn ml-96">Login</RouterLink>
-      <RouterLink to="/" class="btnsign">SignUp</RouterLink>
+      <RouterLink to="/login" class="btn ml-96">Login</RouterLink>
+      <RouterLink to="/signup" class="btnsign">SignUp</RouterLink>
 </div>
 <button class="md:hidden text-gray-600 mt-2 " @click="isMenuHidden = !isMenuHidden">
 					<svg
@@ -63,8 +63,8 @@ let isMenuHidden=ref(true);
     <li><RouterLink to="/" class="navs " @click="isMenuHidden=!isMenuHidden">ContactUs  </RouterLink></li>  
 </ul>
 <div class=" md:flex space-x-2 items-center">
-      <RouterLink to="/" class="btn">Login</RouterLink>
-      <RouterLink to="/" class="btnsign">SignUp</RouterLink>
+      <RouterLink to="/login" class="btn">Login</RouterLink>
+      <RouterLink to="/signup" class="btnsign">SignUp</RouterLink>
 </div>	
 			
 			</div>
