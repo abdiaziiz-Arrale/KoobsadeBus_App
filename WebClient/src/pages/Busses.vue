@@ -16,11 +16,11 @@ console.log("list",driver.value);
 </script>
 <template>
 
-      <h1 class="font-5xl">hello Busses</h1>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4">
-  <DriverCard  v-for="item in driver" :name="item.CarTrNo" :TypeOfBus="item.DriverLiceince">
+  <DriverCard  v-for="item in driver" :TypeOfBus="item.id"  >
   
   </DriverCard>
-  
+
+
   </div>
 </template>

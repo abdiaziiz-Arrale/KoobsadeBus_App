@@ -6,7 +6,7 @@ export interface Driver{
       TypeOfBus:string ;
       CarTrNo: string ;
       NumberOfseats: number ;
-      user?: User ;
+      user: User ;
 
 
 }

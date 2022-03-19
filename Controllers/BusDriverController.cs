@@ -40,7 +40,7 @@ public class BusDriverController:ControllerBase
        TypeOfBus = busDriverViewModel.TypeOfBus,
        NumberOfseats = busDriverViewModel.NumberOfseats,
        CreateAt = DateTime.UtcNow,
-          UserId = 5
+          UserId = 9
 
       };
         await _context.AddAsync(driver);

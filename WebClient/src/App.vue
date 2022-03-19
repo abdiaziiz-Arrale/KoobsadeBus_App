@@ -9,7 +9,10 @@ import { ref } from '@vue/reactivity';
 <template>
 <Nav/>
 <div class="py-10"></div>
+<Suspense>  
 <RouterView />
+
+</Suspense>
 </template>
 
 
