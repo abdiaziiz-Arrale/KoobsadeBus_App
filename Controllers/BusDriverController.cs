@@ -24,23 +24,22 @@ public class BusDriverController:ControllerBase
       }
       [HttpPost]
       // [Authorize]
-      public async Task<IActionResult> AddDriver([FromBody] BusDriverViewModel busDriverViewModel )
+      public async Task<IActionResult> AddDriver( [FromBody] BusDriverViewModel busDriverViewModel )
  
  {
-       var driver = await _context.BusDrivers.Include(d=> d.User).SingleOrDefaultAsync(d=> d.UserId==User.GetId());
-      //  if( driver is null)
-      //  {
-      //        return BadRequest("ka bax meesha");
-      //  }
+       var driver = await _context.BusDrivers.SingleOrDefaultAsync(d=> d.UserId==User.GetId());
+       if( driver  is not null)
+       {
+             return BadRequest("ka bax meesha");
+       }
       driver =new BusDriver
       {
        DriverLisence = busDriverViewModel.DriverLisence ,
-       IsVeriveid = true,
        CarTrNo = busDriverViewModel.CarTrNo,
        TypeOfBus = busDriverViewModel.TypeOfBus,
        NumberOfseats = busDriverViewModel.NumberOfseats,
-       CreateAt = DateTime.UtcNow,
-          UserId = 9
+ 
+          UserId = User.GetId()
 
       };
         await _context.AddAsync(driver);

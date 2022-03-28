@@ -28,8 +28,8 @@ let isMenuHidden=ref(true);
     <li><RouterLink to="/ContactUs" class="navs ">ContactUs  </RouterLink></li>  
 </ul>
 
-<div class="hidden md:flex  space-x-2 float-right  mt-2  ">
-      <RouterLink to="/login" class="btn ml-96">Login</RouterLink>
+<div class="hidden md:flex  space-x-2  mt-2  ">
+      <RouterLink to="/login" class="btn md:ml-32 xl:ml-96">Login</RouterLink>
       <RouterLink to="/signup" class="btnsign">SignUp</RouterLink>
 </div>
 <button class="md:hidden text-gray-600 mt-2 " @click="isMenuHidden = !isMenuHidden">
