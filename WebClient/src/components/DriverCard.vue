@@ -24,4 +24,5 @@ defineProps<{ name: string, TypeOfBus: string , numberOfseats:string}>();
 			<button name="button" class="bg-blue-800 px-6 py-2 rounded-lg text-white ">Dalbo</button>
 		</div>
 	</div>
+	
 </template>

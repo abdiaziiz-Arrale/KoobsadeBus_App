@@ -10,7 +10,10 @@ const hello = async ()=>{
 const gapi = (window as any).gapi;
  gapi.load("auth2", async function () {
   await gapi.auth2.init({ client_id: '708097977608-80075khuh7f3e5d5m6p69gdrakqopbng.apps.googleusercontent.com' });
+const authInstance = gapi.auth2.getAuthInstance();
+const result = authInstance.signIn();
 });
+
 
 </script>
 

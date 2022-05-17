@@ -20,6 +20,7 @@ console.log("list",driver.value);
   <DriverCard  v-for="item in driver" :name="item.user.fullName" :TypeOfBus="item.typeOfBus" :numberOfseats="item.numberOfseats">
   
   </DriverCard>
+  
   </div>
 
   <div class="mt-30 "></div>
